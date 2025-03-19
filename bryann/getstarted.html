@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeback's Blog</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            transition: all 1s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .blog-post {
+            margin-bottom: 40px;
+        }
+
+        .date {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .nav-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .creepy {
+            background-color: #1a1a1a;
+            color: #ff3333;
+            font-family: 'Courier New', monospace;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="page1" class="container">
+        <h1>Welcome to Zeback's Blog!</h1>
+        
+        <div class="blog-post">
+            <p class="date">March 10, 2025</p>
+            <h2>My First Post</h2>
+            <p>Hello everyone! I'm so excited to start this blog. My name is Zeback, and I’ll be sharing my daily thoughts, experiences, and maybe some cool recipes too! Today was pretty great - went for a walk in the park, had a nice coffee, and read a good book. The weather’s been perfect lately, all sunny and warm. What’s your favorite way to spend a sunny day?</p>
+        </div>
+
+        <div class="blog-post">
+            <p class="date">March 11, 2025</p>
+            <h2>Tried a New Recipe</h2>
+            <p>Hey folks! Made a killer lasagna today. Took me a couple hours, but totally worth it. The secret? Extra cheese and a pinch of oregano. Work was pretty standard, but I’m looking forward to the weekend. Maybe I’ll go hiking if the weather holds up. Anyone got trail recommendations?</p>
+        </div>
+
+        <div class="blog-post">
+            <p class="date">March 12, 2025</p>
+            <h2>Quiet Evening</h2>
+            <p>Just chilling tonight with some music and a glass of wine. It’s nice to unwind after a busy week. Been thinking about starting a garden - maybe some herbs to start. Nothing beats fresh basil in your cooking, right? Let me know if you have any gardening tips!</p>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="button" onclick="showPage(2)">Next Page</button>
+        </div>
+    </div>
+
+    <div id="page2" class="container hidden">
+        <h1>Zeback's Blog</h1>
+        
+        <div class="blog-post">
+            <p class="date">March 13, 2025</p>
+            <h2>Feeling Strange</h2>
+            <p>Today felt... weird. I don’t know how to explain it, but it’s like someone was watching me all day. Kept looking over my shoulder, but nothing there. Probably just tired. Work was stressful, maybe that’s it. Anyone else get that feeling sometimes?</p>
+        </div>
+
+        <div class="blog-post">
+            <p class="date">March 14, 2025</p>
+            <h2>Odd Noises</h2>
+            <p>Heard some weird noises last night. Like whispers, but I live alone. Checked all the windows - everything’s locked. Maybe it’s just the wind, but it’s starting to creep me out. Didn’t sleep much. Coffee’s my best friend today.</p>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="button" onclick="showPage(1)">Previous Page</button>
+            <button class="button" onclick="showPage(3)">Next Page</button>
+        </div>
+    </div>
+
+    <div id="page3" class="container hidden">
+        <h1>Zeback's Blog</h1>
+        
+        <div class="blog-post">
+            <p class="date">March 15, 2025</p>
+            <h2>They’re Coming</h2>
+            <p>They’re coming. I know they are. I saw shadows moving outside last night. Heard them scratching at the walls. I can’t sleep. I can’t think straight. What do they want from me?</p>
+        </div>
+
+        <div class="blog-post">
+            <p class="date">March 16, 2025</p>
+            <h2>It’s Too Late</h2>
+            <p>They’re inside now. I hear their voices everywhere. Help us. It’s too late for me. Run.</p>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="button" onclick="showPage(2)">Previous Page</button>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageNum) {
+            document.querySelectorAll('.container').forEach(container => {
+                container.classList.add('hidden');
+            });
+            document.getElementById(`page${pageNum}`).classList.remove('hidden');
+            updateAtmosphere(pageNum);
+        }
+
+        function updateAtmosphere(pageNum) {
+            const body = document.body;
+            const container = document.getElementById(`page${pageNum}`);
+            
+            switch(pageNum) {
+                case 1:
+                    body.style.backgroundColor = '#f0f0f0';
+                    container.classList.remove('creepy');
+                    container.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
+                    document.querySelectorAll('.button').forEach(btn => {
+                        btn.style.backgroundColor = '#007bff';
+                    });
+                    break;
+                case 2:
+                    body.style.backgroundColor = '#808080';
+                    container.classList.remove('creepy');
+                    container.style.boxShadow = '0 0 20px rgba(0,0,0,0.3)';
+                    break;
+                case 3:
+                    body.style.backgroundColor = '#000000';
+                    container.classList.remove('creepy');
+                    container.style.boxShadow = 'none';
+                    container.style.backgroundColor = '#ffffff';
+                    document.querySelectorAll('.button').forEach(btn => {
+                        btn.style.backgroundColor = '#007bff';
+                    });
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeback's Blog - Contact</title>
+    <!-- Including Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f0f0 0%, #d9e6ff 100%);
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: linear-gradient(to right, #333, #555);
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .navbar a:hover {
+            color: #66b3ff;
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e0e0e0;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-info h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info p {
+            color: #555;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        .social-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-list li {
+            background: #f9f9f9;
+            padding: 15px 25px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-list a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-list a:hover {
+            color: #0056b3;
+        }
+
+        .social-list i {
+            font-size: 1.5em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#">Headlines</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <div class="contact-info">
+            <h1>Get in Touch!</h1>
+            <p>Hey, awesome people! These are my contacts—hit me up anytime! Whether it’s blog stuff or just to chat about life, I’m here for it.</p>
+        </div>
+
+        <ul class="social-list">
+            <li>
+                <a href="https://twitter.com/ZebackBruce" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter - @BruceZeBacker
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com/ZebackBruce" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram - @Brucersss
+                </a>
+            </li>
+            <li>
+                <a href="https://facebook.com/ZebackBruce" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook - Bruce Backer
+                </a>
+            </li>
+            <li>
+                <a href="mailto:zebackbruce@example.com">
+                    <i class="fas fa-envelope"></i> Email - zebackbruce@hotmail.com
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
